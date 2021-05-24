@@ -1,5 +1,3 @@
-console.log('client side ');
-
 const path = require('path');
 const hbs = require('hbs');
 const express = require('express');
