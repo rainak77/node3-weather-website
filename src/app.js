@@ -12,6 +12,8 @@ const forecast = require('./utils/foreCast');
 
 const app = express();
 
+const port = process.env.PORT || 3000;
+
 //Define path for express config
 const publicDirectoryPath = path.join(__dirname, '../public');
 const viewsPath = path.join(__dirname, '../template/views');
@@ -113,6 +115,6 @@ app.get('', () => {
 
 /*Now the other optional argument we can pass to the listen method is a 
 callback function, which just runs when the server is up and running. */
-app.listen(3000, () => {
-    console.log('server is up on port 3000');
+app.listen(port, () => {
+    console.log('server is up on port - ' + port);
 });
