@@ -11,7 +11,8 @@ const forecast = (lng, lat, forecastCallback) => {
         else {
             const realtemp = response.body.current.temperature;
             const feelsLike = response.body.current.feelslike;
-            forecastCallback(undefined, `${response.body.current.weather_descriptions}. It is currently ${realtemp} degress out. It feels like ${feelsLike} degress out`);
+            const humidity = response.body.current.humidity;
+            forecastCallback(undefined, `${response.body.current.weather_descriptions}. It is currently ${realtemp} degress out. It feels like ${feelsLike} degress out.The humidity is ${humidity}`);
         }
     });
 
